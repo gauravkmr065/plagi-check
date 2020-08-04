@@ -3,5 +3,7 @@ The Application is a Web based application that will have a Web form used to do 
 
 Installing Guid:-
 npm install
+npm fund
 
 you need to install MongoDB , node.js 
+you wil need to create a upload folder
