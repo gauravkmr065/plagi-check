@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Plagiarism Detector</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/images/m2.png" type="image/x-icon">
+	<!-- <script src="/css/bootstrap/jquery.min.js"></script> -->
+	<!-- <script src="/css/bootstrap/popper.min.js"></script> -->
+	<!-- <script src="/css/bootstrap/bootstrap.min.js"></script> -->
+	<style type="text/css">
+		.alert-danger { color: #721c24 }
+		#pageContent {
+			display: none;
+			min-height: 100vh;
+			position: relative;
+		}
+		#footer {
+			z-index: 5;
+			position: fixed;
+			bottom: 0;
+			left: 0; right: 0;
+			background-color: #fff;
+		}
+		#loader{
+			display: flex; align-items: center; justify-content: center;
+			position: fixed; top: 0; left: 0; z-index: 999;
+			background: rgba(0,0,0, 0.9);
+			width: 100vw; height: 100vh;
+			overflow: hidden;
+		}
+		#loaderCircle {
+			width: 80px; height: 80px;
+			box-sizing: border-box;
+			border: 10px solid #f3f3f3; border-radius: 50%; border-top: 10px solid rgb(254,0,0); border-left: 10px solid rgb(254,0,0); ;
+			-webkit-animation: spin 2s linear infinite;
+			animation: spin 2s linear infinite;
+		}
+
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+
+		@keyframes animatebottom { 
+			from{ bottom:-20vh; opacity:0 } 
+			to{ bottom:0; opacity:1 }
+		}
+
+		.animate-bottom {
+			position: relative;
+			-webkit-animation-name: animatebottom;
+			-webkit-animation-duration: 0.6s;
+			animation-name: animatebottom;
+			animation-duration: 0.6s
+		}
+
+	</style>
+	<link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+</head>
+
+<body onload="stopLoader()">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+            <a class="navbar-brand" href="#">TCS iON InternShip</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"> gaurav kumar <span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    <div class="jumbotron">
+        <h1 style="text-align: center;">Copy The Extracted Text From Image And Paste In Home Page Question Field</h1>
+        <br>
+    </div>
+    <br>
+    <br>
+    <div class="jumbotron">
+       <h3><%=data%></h3>
+    </div>
+    </div>
+   
+<script type="text/javascript">
+	
+	function startLoader(){
+		document.getElementById("loader").style.display = "flex";
+		document.getElementById("pageContent").style.display = "none";
+	}
+
+	function stopLoader(){
+		document.getElementById("loader").style.display = "none";
+		document.getElementById("pageContent").style.display = "block";
+	}
+	
+</script>
+
+</body>
+</html>
+
+
+

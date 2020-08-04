@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question Creation Plagiriasm Checker </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/images/m2.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta&family=Ranchers&display=swap" rel="stylesheet">
+	<!-- <script src="/css/bootstrap/jquery.min.js"></script> -->
+	<!-- <script src="/css/bootstrap/popper.min.js"></script> -->
+	<!-- <script src="/css/bootstrap/bootstrap.min.js"></script> -->
+	<style type="text/css">
+		.alert-danger { color: #721c24 }
+		#pageContent {
+			display: none;
+			min-height: 100vh;
+			position: relative;
+		}
+		#footer {
+			z-index: 5;
+			position: fixed;
+			bottom: 0;
+			left: 0; right: 0;
+			background-color: #fff;
+		}
+		#loader{
+			display: flex; align-items: center; justify-content: center;
+			position: fixed; top: 0; left: 0; z-index: 999;
+			background: rgba(0,0,0, 0.9);
+			width: 100vw; height: 100vh;
+			overflow: hidden;
+		}
+		#loaderCircle {
+			width: 80px; height: 80px;
+			box-sizing: border-box;
+			border: 10px solid #f3f3f3; border-radius: 50%; border-top: 10px solid rgb(254,0,0); border-left: 10px solid rgb(254,0,0); ;
+			-webkit-animation: spin 2s linear infinite;
+			animation: spin 2s linear infinite;
+		}
+
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+
+		@keyframes animatebottom { 
+			from{ bottom:-20vh; opacity:0 } 
+			to{ bottom:0; opacity:1 }
+		}
+
+		.animate-bottom {
+			position: relative;
+			-webkit-animation-name: animatebottom;
+			-webkit-animation-duration: 0.6s;
+			animation-name: animatebottom;
+			animation-duration: 0.6s
+		}
+		.border-form{
+    margin-top: 50px;
+    border: #000000 solid 2px;
+    padding:40px;
+    border-radius: 5%;
+	/* background-color: mintcream; */
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+body, html {
+  height: 100%;
+}
+	</style>
+	<link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+</head>
+
+<body onload="stopLoader()" class="back">
+   
+	
+
+	<!-- Add loader animation -->
+	<div id="loader">
+		<div id="loaderCircle"></div>
+	</div>
+<div class="container border-form">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+		<a class="navbar-brand" href="#">TCS iON InternShip</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="#"> gaurav kumar <span class="sr-only">(current)</span></a>
+			</li>
+		  </ul>
+		</div>
+	  </nav>
+	<section id="pageContent" class="animate-bottom">
+		<div class="container py-5">
+			<h1 class="text-center mb-3" style="font-family: 'Lexend Zetta', sans-serif; font-style:inherit;  color: cornsilk;">Add A Question</h1>
+			<hr>
+			<h5 class="text-center mb-5" style="font-family: 'Lexend Zetta', sans-serif; color: cornsilk;" >Enter the text in the space given below and submit.</h5>
+
+				<form method="post" action="/result" >
+					<div class="form-group">
+						<input class="form-control" name="query" type="text" rows="10" placeholder="Enter the Question" style=" height:90px; border-width:0.30em; border-color: black;" required></input>
+					</div>
+					<div>
+						<label style="font-family: 'Lexend Zetta', sans-serif; font-family: 'Ranchers', cursive;" >Option 1</label>
+
+					<div class="row">
+						<div class="col">
+						  
+					<input type="checkbox" class="form-control" id="a" placeholder="" name="a">
+						</div>
+						<div class="col">
+							
+					<input type="text" class="form-control option" id="option1" placeholder="option" style=" border-width:0.30em;" name="option1">
+						</div>
+					  </div>
+					</div>
+					<div>
+						<label style="font-family: 'Lexend Zetta', sans-serif; font-family: 'Ranchers', cursive;" >Option 2</label>
+
+					<div class="row">
+						<div class="col">
+						  
+					<input type="checkbox" class="form-control" id="a" placeholder="" name="a">
+						</div>
+						<div class="col">
+							
+					<input type="text" class="form-control option" id="option1" placeholder="option"style=" border-width:0.30em;" name="option1">
+						</div>
+					  </div>
+					</div>
+					<div>
+						<label style="font-family: 'Lexend Zetta', sans-serif; font-family: 'Ranchers', cursive;" >Option 3</label>
+
+					<div class="row">
+						<div class="col">
+						  
+					<input type="checkbox" class="form-control" id="a" placeholder="" name="a">
+						</div>
+						<div class="col">
+							
+					<input type="text" class="form-control option" id="option1" placeholder="option" style=" border-width:0.30em;" name="option1">
+						</div>
+					  </div>
+					</div>
+					<div>
+						<label style="font-family: 'Lexend Zetta', sans-serif; font-family: 'Ranchers', cursive;" >Option 4</label>
+
+					<div class="row">
+						<div class="col">
+						  
+					<input type="checkbox" class="form-control" id="a" placeholder="" name="a">
+						</div>
+						<div class="col">
+							
+					<input type="text" class="form-control option" id="option1" placeholder="option" style=" border-width:0.30em;" name="option1">
+						</div>
+					  </div>
+					</div>
+					<br>
+					<br>
+					<button type="submit"  class="btn btn-primary" onclick="startLoader()" >Check Question Plagiarism </button>
+					
+					<button type="submit"  class="btn btn-success" onclick="startLoader()" >Save Directly</button>
+					
+				</form>
+		</div>	
+		
+		<div class="container-sm " style="width: 50%;">
+			<h2>You can upload a File to plagiarism</h2>
+			<br>
+			<span>Note: Name of the file not seen in field, just ignore that and click to submit and wait until result </span> 
+			<br>
+			<form action="/upload" method="POST" enctype="multipart/form-data">
+				<div class="custom-file mb-3">
+				  <input type="file" name="myImage" id="file" class="custom-file-input">
+				  <label for="file" class="custom-file-label">Choose File</label>
+				</div>
+				<input type="submit" value="Submit" onclick="startLoader()"  class="btn btn-primary btn-block">
+			  </form>
+		</div>
+	</section>
+
+
+</div>
+	
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
+<script type="text/javascript">
+
+	
+	function startLoader(){
+		document.getElementById("loader").style.display = "flex";
+		document.getElementById("pageContent").style.display = "none";
+	}
+
+	function stopLoader(){
+		document.getElementById("loader").style.display = "none";
+		document.getElementById("pageContent").style.display = "block";
+	}
+	
+</script>
+
+</body>
+</html>
