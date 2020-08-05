@@ -6,4 +6,5 @@ npm install ,
 npm fund
 
 you need to install MongoDB , node.js ,  
-you will need to create a upload folder
+you will need to create a upload folder  
+cammand :- node index.js
