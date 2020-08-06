@@ -41,3 +41,11 @@ screenshots :----
 
 
 ![upload image](https://user-images.githubusercontent.com/42857179/89497112-965cbf80-d7b3-11ea-9961-dd5b2904c7a1.png)
+
+
+## FlowMap working of projects Step wise..
+
+![Screenshot (95)](https://user-images.githubusercontent.com/42857179/89497259-e3409600-d7b3-11ea-85e7-3c911e6611eb.png)
+
+
+
