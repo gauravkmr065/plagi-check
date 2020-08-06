@@ -8,3 +8,11 @@ npm fund
 you need to install MongoDB , node.js ,  
 you will need to create a upload folder  
 cammand :- node index.js
+
+
+
+screenshots :----
+
+homepage 
+
+![home](https://user-images.githubusercontent.com/42857179/89496373-2863c880-d7b2-11ea-9b1f-23634e62ab6f.png)
