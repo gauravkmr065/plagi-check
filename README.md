@@ -16,3 +16,19 @@ screenshots :----
 homepage 
 
 ![home](https://user-images.githubusercontent.com/42857179/89496373-2863c880-d7b2-11ea-9b1f-23634e62ab6f.png)
+
+
+
+Result page 
+
+![result of question plagi](https://user-images.githubusercontent.com/42857179/89496678-b6d84a00-d7b2-11ea-89a3-d01121063de3.png)
+
+
+file upload
+
+![file upload](https://user-images.githubusercontent.com/42857179/89496731-d1122800-d7b2-11ea-9c43-65a981156df5.png)
+
+
+Result of files extracted text 
+
+![result of image upload](https://user-images.githubusercontent.com/42857179/89496766-e424f800-d7b2-11ea-8d80-4b2a42e8a5ea.png)
