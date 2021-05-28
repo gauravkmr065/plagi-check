@@ -11,7 +11,7 @@
     "checker"
   ],
   "author": "gaurav kumar",
-  "license":"gaurav",
+  "license": "gaurav",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.3",
